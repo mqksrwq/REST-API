@@ -39,8 +39,8 @@ func (s *Store) Close() {
 }
 
 func (s *Store) User() *UserRepository {
-	if s.userRepository == nil {
-		return &UserRepository{}
+	if s.userRepository != nil {
+		return s.userRepository
 	}
 	s.userRepository = &UserRepository{
 		store: s,

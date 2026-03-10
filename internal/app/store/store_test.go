@@ -12,7 +12,7 @@ var (
 func TestMain(m *testing.M) {
 	dataBaseURL = os.Getenv("DATABASE_URL")
 	if dataBaseURL == "" {
-		dataBaseURL = "host=localhost dbname=restapi_test sslmode=disable user=postgres password=87953"
+		dataBaseURL = "host=localhost dbname=restapi_dev user=postgres password=87953 sslmode=disable"
 	}
 
 	os.Exit(m.Run())
